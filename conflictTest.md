@@ -1,5 +1,5 @@
 Adding some text from VS code !!
 
-Adding new text from Github !!
+Adding new text from Github
 
-Making a change from VS code again
+Making more changes from Github and VS code
