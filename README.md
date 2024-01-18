@@ -4,7 +4,7 @@
 
 ### Elevator pitch
 
-Do you love cats? Do you also love Pacman? The catman application combines both of these into one game. See how long you can play until you are caught by the enemy. Try to beat the high score.
+Do you love cats? Do you also love Pacman? The catman application combines both of these into one game. See how long you can play until you are caught by the enemy. Try to beat the high score. Get notified when the current high score gets beat.
 
 ### Design
 
