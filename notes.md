@@ -25,3 +25,15 @@ All of these can be done in the development environment or GitHub
 
 - provides the ability to create a copy of a GitHub repository of an open source code base that you want to experiment with, or contribute to
 - clones it to GitHub
+
+## AWS & EC2
+
+- http://3.222.95.1/
+    - my web server
+
+use this to remote shell into my server
+>ssh -i cs260.pem ubuntu@3.222.95.1
+
+- because i have an elastci ip address associated with my server's ip address, it won't change even if I need to reboot my server
+- using one isn't necessary, but if I ever stop or reboot my server the ip address will change
+    - keeping the ip consistent matters so I and others can access my webpage at the same place everytime
