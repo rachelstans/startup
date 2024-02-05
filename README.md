@@ -34,3 +34,13 @@ I am going to use the required technologies in the following ways.
 - **WebSocket** - As a player beats the highscore, other users playing the game receive a push notification telling them this.
 - **React** - Application ported to use the React web framework.
 
+## HTML deliverable
+
+For this deliverable I built out the structure of my application using HTML.
+
+- **HTML pages** - Four HTML page that represent the home page and the ability to login and play and see the leaderboard.
+- **Links** - The index and leaderboard html pages have links to play, go home, and see the leaderboard. The login page automatically links to the play page.
+- **Text** - The push notification is represented by a textual description.
+- **Images** - Currently my maze is an image, but this might change later so I will put another image if I do end up changing it
+- **DB/Login** - Input box and submit button for login. The leaderboard represents data pulled from the database.
+- **WebSocket** - The push notification on the play page represents in realtime as someone becomes ranked 1 on the leaderboard.
