@@ -32,7 +32,7 @@ All of these can be done in the development environment or GitHub
     - my web server
 
 use this to remote shell into my server
->ssh -i cs260.pem ubuntu@3.222.95.1
+>ssh -i cs260.pem ubuntu@katman.click
 
 - because i have an elastci ip address associated with my server's ip address, it won't change even if I need to reboot my server
 - using one isn't necessary, but if I ever stop or reboot my server the ip address will change
