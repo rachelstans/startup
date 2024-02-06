@@ -39,7 +39,7 @@ I am going to use the required technologies in the following ways.
 For this deliverable I built out the structure of my application using HTML.
 
 - **HTML pages** - Four HTML page that represent the home page and the ability to login and play and see the leaderboard.
-- **Links** - The index and leaderboard html pages have links to play, go home, and see the leaderboard. The login page automatically links to the play page.
+- **Links** - The index, play, and leaderboard pages have links to play, home, and leaderboard pages. The login page automatically links to the play page.
 - **Text** - The push notification is represented by a textual description.
 - **Images** - Currently my maze is an image, but this might change later so I will put another image if I do end up changing it
 - **DB/Login** - Input box and submit button for login. The leaderboard represents data pulled from the database.
