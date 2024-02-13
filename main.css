@@ -1,0 +1,9 @@
+@font-face {
+    font-family: mainTitle;
+    src: url('PAC-FONT.TTF');
+    font-style: normal;
+}
+
+header h1 {
+    font-family: mainTitle;
+}
