@@ -14,13 +14,11 @@ a {
     text-decoration: none;
 }
 
-/* fix screen so it id fixed and doesn't scroll */
 body {
     display: flex;
     flex-direction: column;
     height: 100%;
     margin-top: 25vh;
-    margin-bottom: 5vh;
     background-image: url('91657.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -37,7 +35,7 @@ header {
 header h1 {
     font-family: mainTitle;
     color: aliceblue;
-    font-size: 100px;
+    font-size: 130px;
 }
 
 main {
@@ -46,14 +44,14 @@ main {
     /* margin-left: 10vh; */
     justify-content: center;
     align-items: center;
+    padding-left: 15vh;
 }
 
 /* fix spacing between name and github */
 footer {
-    flex: 0 10vh;
+    flex: 0 15vh;
     display: flex;
-    padding-top: 10vh;
-    flex-direction: column;
+    padding-top: 5vh;
     justify-content: right;
     align-items: end;
 }
@@ -71,4 +69,9 @@ footer {
 li:hover, 
 a:hover {
     filter: brightness(200%);
+}
+
+footer a {
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
