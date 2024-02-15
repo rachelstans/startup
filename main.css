@@ -4,6 +4,68 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: normalText;
+    src: url('ARCADECLASSIC.TTF');
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 25vh;
+    margin-bottom: 5vh;
+    background-image: url('91657.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+header {
+    flex: 0 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header h1 {
     font-family: mainTitle;
+    color: aliceblue;
+    font-size: 100px;
+}
+
+main {
+    flex: 0 10vh;
+    display: flex;
+    /* margin-left: 10vh; */
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    flex: 0 10vh;
+    display: flex;
+    padding-top: 10vh;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
+
+li, 
+footer {
+    color:indigo;
+    font-family: normalText;
+    font-size: 40px;
+    filter: brightness(180%);
+    list-style-type: none;
+}
+
+li:hover, 
+a:hover {
+    filter: brightness(200%);
 }
