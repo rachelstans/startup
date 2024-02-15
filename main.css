@@ -36,7 +36,7 @@ header {
 header h1 {
     font-family: mainTitle;
     color: aliceblue;
-    font-size: 130px;
+    font-size: 100px;
 }
 
 main {
@@ -45,7 +45,7 @@ main {
     /* margin-left: 10vh; */
     justify-content: center;
     align-items: center;
-    padding-left: 15vh;
+    padding-left: 10vh;
 }
 
 /* fix spacing between name and github */
@@ -61,7 +61,7 @@ li,
 footer {
     color:indigo;
     font-family: normalText;
-    font-size: 40px;
+    font-size: 35px;
     filter: brightness(180%);
     list-style-type: none;
 }
