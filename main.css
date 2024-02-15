@@ -14,6 +14,7 @@ a {
     text-decoration: none;
 }
 
+/* adjust so when screen is shrunk text moves with it */
 body {
     display: flex;
     flex-direction: column;
