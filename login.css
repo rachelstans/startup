@@ -34,6 +34,7 @@ header h1 {
     font-size: 100px;
 }
 
+/* fix to make look more like a retro game */
 main {
     flex: 0 10vh;
     display: flex;
