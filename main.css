@@ -14,12 +14,17 @@ a {
     text-decoration: none;
 }
 
-/* adjust so when screen is shrunk text moves with it */
+html {
+    height: 100%;
+}
+
+
 body {
+    margin: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-top: 25vh;
+
     background-image: url('91657.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,34 +32,45 @@ body {
 }
 
 header {
-    flex: 0 25vh;
+    flex: 0 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-header h1 {
+h1 {
     font-family: mainTitle;
     color: aliceblue;
     font-size: 100px;
 }
 
 main {
-    flex: 0 10vh;
+    flex: 1;
+
     display: flex;
-    /* margin-left: 10vh; */
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-left: 10vh;
 }
 
-/* fix spacing between name and github */
-footer {
-    flex: 0 15vh;
+section:nth-child(1) {
+    flex: 2;
+
     display: flex;
-    padding-top: 5vh;
+    justify-content: end;
+}
+section:nth-child(2) {
+    flex: 2;
+    padding-left: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+footer {
+    flex: 0 100px;
+
+    display: flex;
+    flex-direction: row;
     justify-content: right;
-    align-items: end;
 }
 
 li, 
