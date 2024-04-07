@@ -53,14 +53,14 @@ li {
     color:indigo !important;
     font-family: normalText;
     font-size: 30px;
-    filter: brightness(180%);
+    filter: brightness(150%);
     list-style-type: none;
 }
 
 main {
     flex: 1 !important;
     color:indigo;
-    filter: brightness(180%);
+    filter: brightness(170%);
     font-family: normalText;
     font-size: 30px;
 
@@ -78,6 +78,6 @@ th, td {
     text-align: left;
 }
 
-li:hover {
-    filter: brightness(300%);
+li:hover, a:hover {
+    filter: brightness(200%) !important;
 }
