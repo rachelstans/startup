@@ -44,3 +44,14 @@ For this deliverable I built out the structure of my application using HTML.
 - **Images** - Currently my maze is an image, but this might change later so I will put another image if I do end up changing it
 - **DB/Login** - Input box and submit button for login. The leaderboard represents data pulled from the database.
 - **WebSocket** - The push notification on the play page represents in realtime as someone becomes ranked 1 on the leaderboard.
+
+## CSS deliverable
+
+For this deliverable I properly styled the application into its final appearance.
+
+- **Header, footer, and main content body**
+- **Navigation elements** - I dropped the underlines and they only appear when hovering. They also brighten when hovered on.
+- **Responsive to window resizing** - My app looks great on all window sizes and devices
+- **Application elements** - Used good contrast and whitespace
+- **Application text content** - Two consistent fonts
+- **Application images** - My maze is an image, but will be changed a lot in JavaScript
