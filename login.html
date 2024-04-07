@@ -2,7 +2,10 @@
 <html lang="en">
    <head>
     <meta charset="UTF-8" />
+
+    <script src="login.js"></script>
     <link rel="stylesheet" href="login.css" />
+
     <!-- minify -->
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <!-- latest -->
@@ -21,10 +24,8 @@
             <p>Login to play</p>
             <div id="input">
                 <label for="name">Name</label>
-                <input type="text" class="nes-input" size="12" placeholder="Your name here" max="25"/>
-                <form method="get" action="play.html">
-                    <button type="submit">Login</button>
-                </form>
+                <input type="text" id="name" class="nes-input" size="12" placeholder="Your name here" max="25"/>
+                <button type="submit" onclick="login()">Login</button>
             </div>
         </div>
     </main>
