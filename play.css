@@ -1,0 +1,93 @@
+@font-face {
+    font-family: mainTitle;
+    src: url('PAC-FONT.TTF');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: normalText;
+    src: url('ARCADECLASSIC.TTF');
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    background-image: url('91657.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+header {
+    flex: 0 170px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-family: mainTitle;
+    color: aliceblue;
+    font-size: 50px;
+}
+
+li {
+    padding: 10px;
+    display: inline;
+
+    color:indigo;
+    font-family: normalText;
+    font-size: 30px;
+    filter: brightness(150%);
+    list-style-type: none;
+}
+
+main {
+    flex: 1;
+    color:indigo;
+    filter: brightness(180%);
+    font-family: normalText;
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 30%;
+}
+
+main h1, th {
+    filter: brightness(300%);
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+}
+
+li:hover, a:hover {
+    filter: brightness(200%);
+}
+
+footer {
+    padding: 10px;
+}
+.nes-container {
+    font-family: normalText;
+    display: inline-block;
+    max-width: 50%;
+    size: 400px;
+}
