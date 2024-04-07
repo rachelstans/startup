@@ -3,16 +3,21 @@
    <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="play.css" />
+     <!-- minify -->
+     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+     <!-- latest -->
+     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+     <!-- core style only -->
+     <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
     <!-- maybe add an icon later -->
    </head>
    <body>
     <header>
         <h1>Katman</h1>
-
         <nav>
             <menu>
               <li><a href="index.html">Home</a></li>
-              <li><a href="login.html">Play</a></li>
+              <li><a href="login.html"><u>Play</u></a></li>
               <li><a href="leaderboard.html">Leaderboard</a></li>
             </menu>
         </nav>
@@ -23,8 +28,10 @@
     </main>
     <footer>
         <!-- push notification place holder -->
-        <h1>New Leader!! &#40;Push notification place holder&#41;</h1>
-        <p>Player Rachay just scored 100 points and is now ranked number 1 on the leaderboard!</p>
+        <div class="nes-container is-rounded is-dark with-title">
+            <p class="title">New Leader!! &#40;Push notification place holder&#41;</p>
+            <p>Player Rachay just scored 100 points and is now ranked number 1 on the leaderboard!</p>
+        </div>
     </footer>
    </body>
 </html>
