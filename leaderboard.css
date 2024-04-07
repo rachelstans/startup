@@ -32,8 +32,8 @@ body {
 }
 
 header {
-    flex: 0 150px;
-    display: flex;
+    flex: 0 170px !important;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     margin-left: 30px;
@@ -50,7 +50,7 @@ li {
     padding: 10px;
     display: inline;
 
-    color:indigo;
+    color:indigo !important;
     font-family: normalText;
     font-size: 30px;
     filter: brightness(180%);
@@ -58,13 +58,13 @@ li {
 }
 
 main {
-    flex: 1;
+    flex: 1 !important;
     color:indigo;
     filter: brightness(180%);
     font-family: normalText;
     font-size: 30px;
 
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
 }
