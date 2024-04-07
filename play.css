@@ -69,17 +69,16 @@ main {
     margin-left: 35%;
 }
 
-main h1, th {
+main h1 {
     filter: brightness(300%);
-}
-
-th, td {
-    padding: 20px;
-    text-align: left;
 }
 
 li:hover, a:hover {
     filter: brightness(200%);
+}
+
+.nes-btn {
+    padding: 1px;
 }
 
 footer {
