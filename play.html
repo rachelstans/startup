@@ -23,9 +23,8 @@
         </nav>
     </header>
     <main>
-        <h1>Score: 23</h1>
-        <img src="https://hereandabove.com/cgi-bin/maze?50+30+6+2+5+0+0+0+255+255+255" alt="maze">
-        <a class="nes-btn" onclick="game.reset()">Reset Game</a>
+        <h1>Score: <span id="scoreEl">0</span></h1>
+        <canvas class="game"></canvas>
     </main>
     <footer>
         <!-- push notification place holder -->
@@ -34,5 +33,6 @@
             <p>Player Rachay just scored 100 points and is now ranked number 1 on the leaderboard!</p>
         </div>
     </footer>
+    <script src="play.js"></script>
    </body>
 </html>
