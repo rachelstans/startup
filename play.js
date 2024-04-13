@@ -491,3 +491,11 @@ addEventListener('keyup', ({key}) => {
             break
     }
 })
+
+// Simulate live updates that will come over WebSocket
+setInterval(() => {
+    const score = Math.floor(Math.random() * 3000);
+    const chatText = document.querySelector('#live-updates');
+    chatText.innerHTML =
+      `${getPlayerName()} just scored ${score} points`;
+  }, 5000);

@@ -91,11 +91,10 @@ li:hover, a:hover {
 
 footer {
     flex: 0 0 100px;
-    margin-left: 10px;
+    margin: 10px;
 }
 
 .nes-container {
     font-family: normalText;
-    max-width: 70%;
-    size: 500px;
+    max-width: 40%;
 }
