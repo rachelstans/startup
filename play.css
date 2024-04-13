@@ -16,6 +16,7 @@ a {
 
 html {
     height: 100%;
+    margin: 0;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
 }
 
 header {
-    flex: 0 170px;
+    flex: 0 0 150px;
     display: flex !important;
     align-items: center;
     justify-content: space-between;
@@ -65,12 +66,19 @@ main {
 
     display: flex;
     flex-direction: column;
-    align-items: start;
-    margin-left: 35%;
+    min-height: 0;
+    overflow-y: hidden;
 }
 
 main h1 {
+    max-height: 60px;
+    text-align: center;
     filter: brightness(300%);
+}
+
+canvas {
+    width: 83.5%;
+    margin-left: 17.5%;
 }
 
 li:hover, a:hover {
@@ -82,11 +90,12 @@ li:hover, a:hover {
 }
 
 footer {
-    padding: 10px;
+    flex: 0 0 100px;
+    margin-left: 10px;
 }
+
 .nes-container {
     font-family: normalText;
-    display: inline-block;
-    max-width: 50%;
-    size: 400px;
+    max-width: 70%;
+    size: 500px;
 }
