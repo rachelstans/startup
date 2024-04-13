@@ -32,7 +32,7 @@ body {
 }
 
 header {
-    flex: 0 170px !important;
+    flex: 0 0 160px !important;
     display: flex !important;
     align-items: center;
     justify-content: space-between;
@@ -67,15 +67,42 @@ main {
     display: flex !important;
     flex-direction: column;
     align-items: center;
+    min-height: 0;
+    overflow-y: hidden;
 }
 
 main h1, th {
     filter: brightness(300%);
 }
 
-th, td {
+main h1 {
+    flex: 0 0 60px;
+}
+
+table {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+thead {
+    /* display: table; */
+    /* width: 790px; */
+    /* table-layout: fixed; */
+    text-align: center;
     padding: 20px;
-    text-align: left;
+    margin-bottom: 7px;
+}
+
+tbody {
+    /* display: block;
+    table-layout: fixed;
+    width: 710px;
+    overflow: auto; */
+    text-align: center;
+}
+
+td {
+    padding: 10px;
 }
 
 li:hover, a:hover {
