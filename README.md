@@ -55,3 +55,12 @@ For this deliverable I properly styled the application into its final appearance
 - **Application elements** - Used good contrast and whitespace
 - **Application text content** - Two consistent fonts
 - **Application images** - My maze is an image, but will be changed a lot in JavaScript
+
+## JavaScript deliverable
+
+For this deliverable I implemented by JavaScript so that the application works for a single user. I also added placeholders for future technology.
+
+- [x] **login** - When you press the login button it takes you to the play page.
+- [x] **database** - Displayed the scores on the leaderboard page. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
+- [x] **WebSocket** - I used the setInterval function to periodically increase a random score. This will be replaced with WebSocket messages later.
+- [x] **application logic** - The ranking number changes based up the user's score.
