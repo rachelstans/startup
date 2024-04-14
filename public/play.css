@@ -1,12 +1,12 @@
 @font-face {
     font-family: mainTitle;
-    src: url('PAC-FONT.TTF');
+    src: url('fonts/PAC-FONT.TTF');
     font-style: normal;
 }
 
 @font-face {
     font-family: normalText;
-    src: url('ARCADECLASSIC.TTF');
+    src: url('fonts/ARCADECLASSIC.TTF');
     font-style: normal;
 }
 
