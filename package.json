@@ -15,5 +15,9 @@
   "homepage": "https://github.com/rachelstans/startup#readme",
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rachelstans/startup/issues"
+  },
+  "keywords": []
 }
