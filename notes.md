@@ -47,3 +47,7 @@ if it says zsh: permission denied then put:
 - because i have an elastic ip address associated with my server's ip address, it won't change even if I need to reboot my server
 - using one isn't necessary, but if I ever stop or reboot my server the ip address will change
     - keeping the ip consistent matters so I and others can access my webpage at the same place everytime
+
+Endpoint Requests
+> curl -X POST localhost:4000/api/score -d '{"name":"test","score":350,"date":"4/16/2024"}' -H 'Content-Type: application/json'
+> curl -X GET localhost:4000/api/scores
