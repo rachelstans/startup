@@ -44,6 +44,8 @@ use this to deploy to production environment:
 if it says zsh: permission denied then put:
 >chmod +x deployFiles.sh
 
+>chmod +x deployService.sh
+
 - because i have an elastic ip address associated with my server's ip address, it won't change even if I need to reboot my server
 - using one isn't necessary, but if I ever stop or reboot my server the ip address will change
     - keeping the ip consistent matters so I and others can access my webpage at the same place everytime
