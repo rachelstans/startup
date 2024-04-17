@@ -64,3 +64,13 @@ For this deliverable I implemented by JavaScript so that the application works f
 - [x] **database** - Displayed the scores on the leaderboard page. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
 - [x] **WebSocket** - I used the setInterval function to periodically increase a random score. This will be replaced with WebSocket messages later.
 - [x] **application logic** - The ranking number changes based up the user's score.
+
+## Service deliverable
+
+For this deliverable I added backend endpoints that receives votes and returns the voting totals.
+
+- [x] **Node.js/Express HTTP service** - done!
+- [x] **Static middleware for frontend** - done!
+- [ ] **Calls to third party endpoints** - Displayed the a quote from the https://api.quotable.io/random on my leaderboard page.
+- [x] **Backend service endpoints** - Placeholders for login that stores the current user on the server. Endpoints for scores.
+- [x] **Frontend calls service endpoints** - I did this using the fetch function.
