@@ -214,38 +214,50 @@ function circleCollidesWithRectangle({circle, rectangle}) {
     )
 }
 
-function updateScores(userName, score, scores) {
+async function saveScore(score) {
+    const userName = this.getPlayerName();
     const date = new Date().toLocaleDateString();
-    const newScore = { name: userName, score: score, date: date };
+    const newScore = {name: userName, score: score, date: date};
 
-    let found = false;
-    for (const [i, prevScore] of scores.entries()) {
-      if (score > prevScore.score) {
-        scores.splice(i, 0, newScore);
-        found = true;
-        break;
-      }
+    try {
+      const response = await fetch('/api/score', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(newScore),
+      });
+
+      // Store what the service gave us as the high scores
+      const scores = await response.json();
+      localStorage.setItem('scores', JSON.stringify(scores));
+    } catch {
+      // If there was an error then just track scores locally
+      this.updateScoresLocal(newScore);
     }
-
-    if (!found) {
-      scores.push(newScore);
-    }
-
-    if (scores.length > 10) {
-      scores.length = 10;
-    }
-
-    return scores;
 }
 
-function saveScore(score) {
-    const userName = this.getPlayerName();
+function updateScoresLocal(newScore) {
     let scores = [];
     const scoresText = localStorage.getItem('scores');
     if (scoresText) {
-      scores = JSON.parse(scoresText);
+        scores = JSON.parse(scoresText);
     }
-    scores = this.updateScores(userName, score, scores);
+
+    let found = false;
+    for (const [i, prevScore] of scores.entries()) {
+        if (newScore > prevScore.score) {
+        scores.splice(i, 0, newScore);
+        found = true;
+        break;
+        }
+    }
+
+    if (!found) {
+        scores.push(newScore);
+    }
+
+    if (scores.length > 10) {
+        scores.length = 10;
+    }
 
     localStorage.setItem('scores', JSON.stringify(scores));
 }
@@ -394,7 +406,6 @@ function animate() {
             })) {
                 collisions.push('down')
             }
-            console.log(collisions)
         })
 
         if (collisions.length > ghost.prevCollisions.length) {
@@ -411,11 +422,7 @@ function animate() {
                 return !collisions.includes(collision)
             })
 
-            console.log({pathways})
-
             const direction = pathways[Math.floor(Math.random() * pathways.length)]
-
-            console.log({direction})
 
             switch (direction) {
                 case 'right':
