@@ -108,3 +108,14 @@ td {
 li:hover, a:hover {
     filter: brightness(200%) !important;
 }
+
+footer {
+    flex: 0 0 150px;
+    padding: 8px;
+    font-family: normalText;
+    text-align: center;
+}
+
+.div {
+    padding: 10px!important;
+}
