@@ -53,3 +53,6 @@ if it says zsh: permission denied then put:
 Endpoint Requests
 > curl -X POST localhost:4000/api/score -d '{"name":"test","score":350,"date":"4/16/2024"}' -H 'Content-Type: application/json'
 > curl -X GET localhost:4000/api/scores
+
+## Node
+- node is a way to execute javascript outside of the browser
