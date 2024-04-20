@@ -1,4 +1,4 @@
-# Catman
+# Katman
 
 ## Specification Deliverable
 
@@ -85,3 +85,12 @@ For this deliverable I associate the scores with the logged in user. I stored th
 - **Stores data in MongoDB** - done!
 - **Use MongoDB to store credentials** - Stores both user and their scores and retreives them.
 - **Restricts functionality** - You cannot play until you have logged in or created a user.
+
+## WebSocket deliverable
+
+For this deliverable I used webSocket to update the votes on the frontend in realtime.
+
+- **Backend listens for WebSocket connection** - done!
+- **Frontend makes WebSocket connection** - done!
+- **Data sent over WebSocket connection** - done!
+- **WebSocket data displayed** - As a player ranks number 1 with a new high score their username and score are displayed in realtime.
