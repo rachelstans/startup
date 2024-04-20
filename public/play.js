@@ -334,7 +334,6 @@ function animate() {
 
     if (pellets.length === 0) {
         cancelAnimationFrame(animationId)
-        // saveScore(score)
     }
 
     // touch pellets here
@@ -377,7 +376,6 @@ function animate() {
                 ) < ghost.radius + player.radius
             ) {
                 cancelAnimationFrame(animationId)
-                // saveScore(score)
             }
 
         const collisions = []
