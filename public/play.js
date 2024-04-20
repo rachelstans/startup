@@ -1,3 +1,5 @@
+const newHighScoreEvent = 'newHighScore';
+
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
@@ -5,6 +7,8 @@ const scoreEl = document.querySelector('#scoreEl')
 
 canvas.width = innerWidth
 canvas.height = innerHeight
+
+this.configureWebSocket();
 
 class Boundary {
     static width = 30
@@ -228,6 +232,9 @@ async function saveScore(score) {
 
       // Store what the service gave us as the high scores
       const scores = await response.json();
+      if (scores[0].score === score) {
+        this.broadcastEvent(this.getPlayerName(), newHighScoreEvent, score);
+      }
       localStorage.setItem('scores', JSON.stringify(scores));
     } catch {
       // If there was an error then just track scores locally
@@ -327,7 +334,7 @@ function animate() {
 
     if (pellets.length === 0) {
         cancelAnimationFrame(animationId)
-        saveScore(score)
+        // saveScore(score)
     }
 
     // touch pellets here
@@ -344,6 +351,7 @@ function animate() {
             pellets.splice(i,1)
             score += 10
             scoreEl.innerHTML = score
+            saveScore(score)
         }
     }
 
@@ -369,7 +377,7 @@ function animate() {
                 ) < ghost.radius + player.radius
             ) {
                 cancelAnimationFrame(animationId)
-                saveScore(score)
+                // saveScore(score)
             }
 
         const collisions = []
@@ -499,10 +507,37 @@ addEventListener('keyup', ({key}) => {
     }
 })
 
-// Simulate live updates that will come over WebSocket
-setInterval(() => {
-    const score = Math.floor(Math.random() * 3000);
-    const chatText = document.querySelector('#live-updates');
-    chatText.innerHTML =
-      `${getPlayerName()} just scored ${score} points`;
-  }, 5000);
+// websocket
+
+function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    this.socket.onopen = (event) => {
+        this.displayMsg('system', 'game', 'connected');
+    };
+    this.socket.onclose = (event) => {
+        this.displayMsg('system', 'game', 'disconnected');
+    };
+    this.socket.onmessage = async (event) => {
+        const msg = JSON.parse(await event.data.text());
+        if (msg.type === newHighScoreEvent) {
+            this.displayMsg(`Player ${msg.from} just scored ${msg.value}`);
+        }
+    };
+}
+
+function displayMsg(cls, from, msg) {
+    const liveUpdates = document.querySelector('#live-updates');
+    if (msg != 'connected' && msg != 'disconnected') {
+        liveUpdates.innerHTML = msg;
+    }
+}
+
+function broadcastEvent(from, type, value) {
+    const event = {
+      from: from,
+      type: type,
+      value: value,
+    };
+    this.socket.send(JSON.stringify(event));
+}
