@@ -3,7 +3,6 @@
    <head>
     <meta charset="UTF-8" />
 
-    <script src="login.js"></script>
     <link rel="stylesheet" href="login.css" />
 
     <!-- minify -->
@@ -21,15 +20,40 @@
         </div>
         <div id="bottom">
             <h2>Welcome!</h2>
-            <p>Login to play</p>
-            <div id="input">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="nes-input" size="12" placeholder="Your name" maxlength="25" required/>
+            <!-- <p>Login to play</p> -->
+            <!-- Displayed when needing authentication -->
+            <form id="loginControls" style="visibility:hidden;">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input class="nes-input" type="text" id="userName" placeholder="your@email.com" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Password</span>
+                    <input class="nes-input" type="password" id="userPassword" placeholder="password" />
+                </div>
+                <div class="inline">
+                    <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+                    <button type="button" class="btn btn-secondary" onclick="createUser()">Create</button>
+                </div>
+            </form>
+            <!-- Displayed when ready to play -->
+            <div id="playControls" style="display: none">
+                <div id="playerName"></div>
+                    <button type="button" class="btn btn-primary" onclick="play()">Play</button>
+                    <button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        <div id="invalid-input"></div>
+        </div>
+
+            <!-- <div id="input">
+                <label for="name">Email</label>
+                <input type="text" id="playerName" class="nes-input" size="12" placeholder="Your name" maxlength="25" required/>
                 <label for="password">Password</label>
                 <input type="password" id="password" class="nes-input" size="12" placeholder="Your password" maxlength="25" required/>
                 <button type="submit" onclick="login()">Login</button>
-            </div>
+            </div> -->
         </div>
     </main>
+    <script src="login.js"></script>
    </body>
 </html>
