@@ -47,7 +47,7 @@ main {
 }
 
 #top {
-    flex: 1 0 50% !important;
+    flex: 1 0 40% !important;
 
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ main {
 }
 
 #bottom {
-    flex: 1 0 50% !important;
+    flex: 1 0 60% !important;
     color:indigo;
     font-family: normalText;
     font-size: 35px;
@@ -68,17 +68,34 @@ main {
     justify-content: start !important;
 }
 
-#input {
+#loginControls {
     display: flex !important;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-label {
-    padding: 10px;
+.input-group-text {
+    display: inline-block;
+    width: 160px;
+    text-align: right;
 }
 
-input {
-    height: 62px;
+.nes-input {
+    display: table-cell;
+    height: 55px;
+    width: 350px !important;
+}
+
+.inline, .playerName {
+    display: inline-block;
+    margin-top: 35px;
+}
+
+.btn-primary {
+    margin-right: 10px;
+}
+
+#invalid-input {
+    margin-top: 10px;
 }
