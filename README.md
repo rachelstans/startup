@@ -60,17 +60,28 @@ For this deliverable I properly styled the application into its final appearance
 
 For this deliverable I implemented by JavaScript so that the application works for a single user. I also added placeholders for future technology.
 
-- [x] **login** - When you press the login button it takes you to the play page.
-- [x] **database** - Displayed the scores on the leaderboard page. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
-- [x] **WebSocket** - I used the setInterval function to periodically increase a random score. This will be replaced with WebSocket messages later.
-- [x] **application logic** - The ranking number changes based up the user's score.
+- **login** - When you press the login button it takes you to the play page.
+- **database** - Displayed the scores on the leaderboard page. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
+- **WebSocket** - I used the setInterval function to periodically increase a random score. This will be replaced with WebSocket messages later.
+- **application logic** - The ranking number changes based up the user's score.
 
 ## Service deliverable
 
 For this deliverable I added backend endpoints that receives votes and returns the voting totals.
 
-- [x] **Node.js/Express HTTP service** - done!
-- [x] **Static middleware for frontend** - done!
-- [ ] **Calls to third party endpoints** - Displayed the a quote from the https://api.quotable.io/random on my leaderboard page.
-- [x] **Backend service endpoints** - Placeholders for login that stores the current user on the server. Endpoints for scores.
-- [x] **Frontend calls service endpoints** - I did this using the fetch function.
+- **Node.js/Express HTTP service** - done!
+- **Static middleware for frontend** - done!
+- **Calls to third party endpoints** - Displayed the a quote from the https://api.quotable.io/random on my leaderboard page.
+- **Backend service endpoints** - Placeholders for login that stores the current user on the server. Endpoints for scores.
+- **Frontend calls service endpoints** - I did this using the fetch function.
+
+## DB/Login deliverable
+
+For this deliverable I associate the scores with the logged in user. I stored the scores and user's login information in the database.
+
+- **User registration** - Creates a new account in the database.
+- **existing user** - Stores the scores under the same user if the user already exists.
+- **MongoDB Atlas database created** - done!
+- **Stores data in MongoDB** - done!
+- **Use MongoDB to store credentials** - Stores both user and their scores and retreives them.
+- **Restricts functionality** - You cannot play until you have logged in or created a user.
